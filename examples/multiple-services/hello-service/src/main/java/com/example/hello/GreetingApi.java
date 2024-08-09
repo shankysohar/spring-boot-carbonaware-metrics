@@ -19,4 +19,13 @@ public class GreetingApi {
         return String.format("Hello, %s!  It looks like the weather will be %s", name, forecast);
     }
 
+    @GetMapping(value = "/emitCarbon")
+    public void emitCarbon() {
+        for (int i=0; i< Integer.MAX_VALUE ; i++) {
+            for (int j=0; j< Integer.MAX_VALUE ; j++) {
+            }
+        }
+    }
+
+
 }

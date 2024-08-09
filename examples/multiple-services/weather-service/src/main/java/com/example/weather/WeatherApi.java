@@ -23,5 +23,12 @@ public class WeatherApi {
         return weatherService.getWeather();
     }
 
+    @GetMapping(value = "/emitCarbon")
+    public void emitCarbon() {
+        for (int i=0; i< Integer.MAX_VALUE ; i++) {
+            for (int j=0; j< Integer.MAX_VALUE ; j++) {
+            }
+        }
+    }
 }
 
