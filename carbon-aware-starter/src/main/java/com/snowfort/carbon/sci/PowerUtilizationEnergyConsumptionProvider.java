@@ -19,8 +19,11 @@ public class PowerUtilizationEnergyConsumptionProvider implements EnergyConsumpt
 
         return hal.getPowerSources()
                 .stream()
-                .mapToDouble(ps -> Math.abs(ps.getPowerUsageRate()) / 1000000)
+                .mapToDouble(ps -> {
+                    double usageRate = Math.abs(ps.getPowerUsageRate()) ;
+                    System.out.println("Power usage rate : " + usageRate);
+                    return usageRate / 1000000;
+                })
                 .average()
-                .orElse(0.0);
-    }
+                .orElse(0.0);    }
 }
