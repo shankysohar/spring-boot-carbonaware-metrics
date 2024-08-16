@@ -28,6 +28,10 @@ public class SoftwareCarbonIntensity {
     }
 
     public double getSoftwareCarbonIntensity() {
+        System.out.println("Energy Consumption is "+ energyConsumption)
+        System.out.println("Marginal Consumption is "+ marginalEmissions)
+        System.out.println("Embodied Consumption is "+ embodiedEmissions)
+
         return (energyConsumption * marginalEmissions) + embodiedEmissions;
     }
 
