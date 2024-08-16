@@ -18,7 +18,7 @@ management:
       exposure:
         include: "*"
 
-weatherServiceForecast:
-  baseUrl: ${weatherServiceForecast_baseUrl:http://localhost:8081}
+#weatherServiceForecast:
+#  baseUrl: ${weatherServiceForecast_baseUrl:http://localhost:8081}
 server:
   port: 8082

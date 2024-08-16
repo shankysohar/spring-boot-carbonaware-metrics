@@ -20,9 +20,9 @@ cd ./carbon-aware-starter
 ./mvnw clean install
 cd $SCRIPT_DIR
 
-cd ./examples/multiple-services/weather-service
-./mvnw clean package
-cd $SCRIPT_DIR
+#cd ./examples/multiple-services/weather-service
+#./mvnw clean package
+#cd $SCRIPT_DIR
 
 cd ./examples/multiple-services/hello-service
 ./mvnw clean package

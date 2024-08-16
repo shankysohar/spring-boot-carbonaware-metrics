@@ -4,11 +4,11 @@ scrape_configs:
     static_configs:
       - targets: ['otel-collector:8889']
       - targets: ['otel-collector:8888']
-  - job_name: 'weather-service-collector'
-    scrape_interval: 10s
-    metrics_path: "/actuator/prometheus"
-    static_configs:
-      - targets: ['weather-service:8081']
+#  - job_name: 'weather-service-collector'
+#    scrape_interval: 10s
+#    metrics_path: "/actuator/prometheus"
+#    static_configs:
+#      - targets: ['weather-service:8081']
   - job_name: 'hello-service-collector'
     scrape_interval: 10s
     metrics_path: "/actuator/prometheus"

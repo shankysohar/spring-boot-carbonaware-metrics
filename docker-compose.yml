@@ -96,18 +96,18 @@ services:
       - EMISSIONS_LOCATION=custom_CAISO_NORTH
       - weatherServiceForecast_baseUrl=http://weather-service:8081
 
-  weather-service:
-    image: weather-service:v1
-    build:
-      dockerfile: Dockerfile
-      context: ./examples/multiple-services/weather-service
-    container_name: weather-service
-    ports:
-      - "8081:8081"
-    env_file:
-      - .env
-    depends_on:
-      - otel-collector
-    environment:
-      - CARBON_AWARE_ENDPOINT=http://carbon-aware-sdk:8080
-      - EMISSIONS_LOCATION=custom_CAISO_NORTH
+#  weather-service:
+#    image: weather-service:v1
+#    build:
+#      dockerfile: Dockerfile
+#      context: ./examples/multiple-services/weather-service
+#    container_name: weather-service
+#    ports:
+#      - "8081:8081"
+#    env_file:
+#      - .env
+#    depends_on:
+#      - otel-collector
+#    environment:
+#      - CARBON_AWARE_ENDPOINT=http://carbon-aware-sdk:8080
+#      - EMISSIONS_LOCATION=custom_CAISO_NORTH

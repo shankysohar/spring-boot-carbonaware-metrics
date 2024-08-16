@@ -18,21 +18,21 @@ public class ForecastService {
     private RestTemplate restTemplate;
     private String baseUrl;
 
-    public ForecastService(
-            RestTemplate restTemplate,
-            @Value("${weatherServiceForecast.baseUrl}") String baseUrl) {
-        this.restTemplate = restTemplate;
-        this.baseUrl = baseUrl;
-    }
-
-    public String getWeather() {
-        String url = String.format("%s/weather", baseUrl);
-
-        String weatherJson = restTemplate.getForObject(url, String.class);
-        JsonObject jobj = new Gson().fromJson(weatherJson, JsonObject.class);
-        String forecast = jobj.get("weatherForecast").getAsString();
-
-        return  forecast;
-    }
+//    public ForecastService(
+//            RestTemplate restTemplate,
+//            @Value("${weatherServiceForecast.baseUrl}") String baseUrl) {
+//        this.restTemplate = restTemplate;
+//        this.baseUrl = baseUrl;
+//    }
+//
+//    public String getWeather() {
+//        String url = String.format("%s/weather", baseUrl);
+//
+//        String weatherJson = restTemplate.getForObject(url, String.class);
+//        JsonObject jobj = new Gson().fromJson(weatherJson, JsonObject.class);
+//        String forecast = jobj.get("weatherForecast").getAsString();
+//
+//        return  forecast;
+//    }
 
 }
