@@ -19,7 +19,21 @@ public class GreetingApi {
         return String.format("Hello, %s!  It looks like the weather will be %s", name, " Good Day");
     }
 
-    @GetMapping(value = "/emitCarbon")
+    @GetMapping(value = "/emitCarbonSimple")
+    public void emitCarbonSimple() {
+        // Run a loop for a specified duration (in milliseconds).
+        long endTime = System.currentTimeMillis() + 10000; // Run for 10 seconds
+
+        while (System.currentTimeMillis() < endTime) {
+            // Perform some intensive calculations to increase CPU load.
+            for (int i = 0; i < Integer.MAX_VALUE; i++) {
+                double result = Math.sqrt(i) * Math.pow(i, 2);
+            }
+        }
+
+        System.out.println("CPU load simulation completed.");
+    }
+        @GetMapping(value = "/emitCarbon")
     public void emitCarbon() {
         int iterations = 1_000_000; // Number of iterations (you can adjust this for more/less load)
         int dataSize = 10_000; // Size of data array (adjust to increase memory usage)

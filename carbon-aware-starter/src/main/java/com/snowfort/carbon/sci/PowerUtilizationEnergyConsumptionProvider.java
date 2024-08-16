@@ -16,6 +16,7 @@ public class PowerUtilizationEnergyConsumptionProvider implements EnergyConsumpt
     public double getEnergyConsumption() {
         SystemInfo si = new SystemInfo();
         HardwareAbstractionLayer hal = si.getHardware();
+        System.out.println("GetPowerSources  : " + hal.getPowerSources());
 
         return hal.getPowerSources()
                 .stream()
