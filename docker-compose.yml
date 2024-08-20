@@ -13,13 +13,13 @@ services:
       - "9090:9090"
   
   # Grafana
-  grafana:
-    container_name: grafana
-    image: grafana/grafana-oss:9.0.0
-    ports:
-      - "3000:3000"
-    depends_on:
-      - prometheus
+#  grafana:
+#    container_name: grafana
+#    image: grafana/grafana-oss:9.0.0
+#    ports:
+#      - "3000:3000"
+#    depends_on:
+#      - prometheus
 
   # Jaeger
   jaeger-all-in-one:
